@@ -10,8 +10,28 @@
   	<description></description>
   	<servlet-class>com.lakshmivel.om.LoginRegisterController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Adminservlet</servlet-name>
+  	<display-name>Adminservlet</display-name>
+  	<description></description>
+  	<servlet-class>com.admin.Adminservlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutAdmin</servlet-name>
+  	<display-name>LogoutAdmin</display-name>
+  	<description></description>
+  	<servlet-class>com.admin.LogoutAdmin</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginRegisterController</servlet-name>
   	<url-pattern>/LoginRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Adminservlet</servlet-name>
+  	<url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutAdmin</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
   </servlet-mapping>
 </web-app>

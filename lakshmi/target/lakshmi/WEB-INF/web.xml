@@ -14,4 +14,15 @@
   	<servlet-name>LoginRegisterController</servlet-name>
   	<url-pattern>/LoginRegister</url-pattern>
   </servlet-mapping>
+   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Adminservlet</servlet-name>
+  	<display-name>Adminservlet</display-name>
+  	<description></description>
+  	<servlet-class>com.admin.Adminservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Adminservlet</servlet-name>
+  	<url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
 </web-app>

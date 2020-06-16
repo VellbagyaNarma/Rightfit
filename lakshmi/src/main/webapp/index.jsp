@@ -31,7 +31,7 @@ color:white;
 }
 
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password] , input[type=numbertext] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -50,6 +50,29 @@ button {
   cursor: pointer;
   width: 100%;
 }
+.login
+{
+
+  background-color: rgb(0, 128, 255) ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.login1
+{
+
+  background-color: rgb(0, 128, 255) ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+}
 
 button:hover {
   opacity: 0.8;
@@ -62,19 +85,32 @@ button:hover {
   background-color: #f44336;
 }
 
+.cancelbtn2 {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
 
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
 }
-
+.imgcontainer2 {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
 img.avatar {
   width: 40%;
   border-radius: 50%;
 }
 
 .container {
+  padding: 16px;
+}
+.container2 {
   padding: 16px;
 }
 
@@ -85,6 +121,19 @@ span.psw {
 
 
 .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+.modal2 {
   display: none; 
   position: fixed; 
   z-index: 1; 
@@ -108,6 +157,15 @@ span.psw {
   width:30%;
 
 }
+.modal-content2 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding:10px;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width:30%;
+
+}
 
 
 .close {
@@ -118,8 +176,23 @@ span.psw {
   font-size: 35px;
   font-weight: bold;
 }
+.close2 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color:rgb(102, 140, 255);
+  font-size: 35px;
+  font-weight: bold;
+}
+
 
 .close:hover,
+.close:focus {
+  color: blue;
+  cursor: pointer;
+}
+
+.close2:hover,
 .close:focus {
   color: blue;
   cursor: pointer;
@@ -166,7 +239,17 @@ padding-left:20px;
   border: none;
   background: #f1f1f1;
 }
-
+ .ok2{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+ .cancelbtn {
+     width: 100%;
+  }
 .ok input[type=text]:focus, input[type=password]:focus,input[type=datetime-local]:focus,select:focus {
   background-color: #ddd;
   outline: none;
@@ -192,6 +275,12 @@ padding-left:20px;
   padding: 14px 20px;
   background-color: #f44336;
 }
+.signupbtn2
+{
+ padding: 14px 20px;
+    background-color: rgb(0, 128, 255) ;
+  color: white;
+}
 
 
 .cancelbtn1, .signupbtn2 {
@@ -203,6 +292,8 @@ padding-left:20px;
 .container1 {
   padding: 16px;
 }
+
+
 
 
 .modal1 {
@@ -249,7 +340,7 @@ hr {
   cursor: pointer;
 }
 
-/* Clear floats */
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -269,6 +360,14 @@ hr {
   
 }
 .slideshow-container img {
+ 
+
+  margin:0px;
+  margin-top:0px;
+  padding-top:5px;
+  
+  }
+  .slideshow-container2 img {
  
 
   margin:0px;
@@ -341,23 +440,55 @@ margin-top:2000px;
 }
 
 </style>
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-var modal1 = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+<script type="text/javascript">
+function validate()
+{
+	var username=document.getElementById("unamei").value;
+	var pass=document.getElementById("password1i").value;
+	if(username=="")
+	{
+	  document.getElementById("unamei").style.border = "solid 3px red";
 	
- else if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-
+	return false;
+	}
+	else if(pass=="")
+	
+	{
+	  document.getElementById("password1i").style.border = "solid 3px red";
+	//document.getElementById("validity1").style.visibility="visible";
+	return false;
+	}
+	
+	else {
+		return true;
+		}
 }
-
+		
+	function validate1()
+	{
+		var username5=document.getElementById("usernameadi").value;
+		var password5=document.getElementById("password1adi").value;
+		if(username5=="")
+		{
+		  document.getElementById("usernameadi").style.border = "solid 3px red";
+		
+		return false;
+		}
+		else if(password5=="")
+		
+		{
+		  document.getElementById("password1adi").style.border = "solid 3px red";
+		
+		return false;
+		}
+		
+		else {
+			return true;
+			}
+			
+	
+	
+}
 
 
 </script>
@@ -372,6 +503,7 @@ window.onclick = function(event) {
 
 <tr>
 <td></td>
+<td><button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Admin Login</button></td>
 <td><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></td>
 <td><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button></td>
 </tr>
@@ -393,14 +525,10 @@ window.onclick = function(event) {
 </div>
 <br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
+
 <div id="id01" class="modal">
  
-  <form class="modal-content animate" action="LoginRegister"  method="post">
+  <form class="modal-content animate"  action="LoginRegister"  method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="avatar3.jpg"alt="Avatar" class="avatar">
@@ -408,22 +536,51 @@ window.onclick = function(event) {
 
     <div class="container">
       <label for="uname"><b>Username or User ID</b></label>
-      <input type="text" placeholder="Enter Username or User ID" name="username" required>
+      <input type="text" placeholder="Enter Username or User ID" name="username" id="unamei" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password1"  required>
+      <input type="password" placeholder="Enter Password" id="password1i" name="password1"  required>
        
-      <input type="submit" value="Login" name="submit">
+      <input type="submit" onclick=" return validate();" value="Login" class="login1" name="submit">
       
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
-  </form>
+  
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+     
+    </div>
+  </form >
+</div>
+<div id="id03" class="modal2">
+ 
+  <form class="modal-content animate2" action="Admin"  method="post">
+    <div class="imgcontainer2">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="adminlogin.png"alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container2">
+      <label for="uname"><b>AdminLogin ID</b></label>
+      <input type="text" placeholder="Enter Admin login id given" id="usernameadi" name="usernamead" required>
+
+      <label for="psw"><b>Admin Password</b></label>
+      <input type="password" placeholder="Enter Password" id="password1adi" name="password1ad"  required>
+       
+      <input type="submit" onclick="return validate1();" class="login" value="Login" name="submit">
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+
+    <div class="container2" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn2">Cancel</button>
+     
     </div>
   </form>
 </div>
@@ -466,7 +623,7 @@ window.onclick = function(event) {
 	<input type="text" placeholder="Other Skills" name="otherskills" required>
     
       <label for="email1"><b>Email</b></label>
-      <input type="text"class="ok" placeholder="Enter Email" name="email1" required>
+      <input type="text" class="ok" placeholder="Enter Email" name="email1" required>
 	  <label for="phonenumber"><b>PhoneNumber</b></label>
 	  <input type="numbertext" class="ok" placeholder="PhoneNumber" name="phone" required>
 	  

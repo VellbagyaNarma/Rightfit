@@ -12,9 +12,10 @@
 <% 
 Temployee O=(Temployee)request.getAttribute("message");
 
-out.println(O.getUsername());
-out.println(O.getEmail1());
-out.println(O.getPhone());
+
+
+out.println("Welcome"+" "+O.getUsername());
+
 %>
 
 </body>
